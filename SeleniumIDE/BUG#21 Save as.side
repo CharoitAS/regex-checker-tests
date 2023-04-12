@@ -1,0 +1,727 @@
+{
+  "id": "c0870d95-a560-4b3e-a8aa-25ac36e85a74",
+  "version": "2.0",
+  "name": "Save as",
+  "url": "https://v1470335.hosted-by-vdsina.ru/regex/",
+  "tests": [{
+    "id": "faac2975-fc5c-4371-b4d2-3863f690ad30",
+    "name": "Save as",
+    "commands": [{
+      "id": "5584531c-aa50-4efa-9292-02b7f10334e3",
+      "comment": "",
+      "command": "open",
+      "target": "https://v1470335.hosted-by-vdsina.ru/regex/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7afc1ebe-7c37-47a8-b020-6333c2af4057",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1050",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9846174d-7fac-4d9f-9115-cb7b4f925410",
+      "comment": "",
+      "command": "addSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Abc"
+    }, {
+      "id": "0fe5308c-ba5a-4778-a5ea-74096f1b4223",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe2c9aed-c436-43a9-a908-6a99a59df928",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aw"
+    }, {
+      "id": "82cb0fdb-c94f-439f-a71c-9044d7d49b20",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create .btn-primary",
+      "targets": [
+        ["css=#dialog-create .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fa422b0-a19a-424d-955b-6315a92117f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-abc-input",
+      "targets": [
+        ["id=create-abc-input", "id"],
+        ["css=#create-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-abc']/div/div/form/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/form/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "aq"
+    }, {
+      "id": "8e32ca46-7c54-4c7b-93e2-b1e51feed87d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create-abc .btn-primary",
+      "targets": [
+        ["css=#dialog-create-abc .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-abc']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/form/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef7fb8c2-d19d-46dc-9a7a-9dbd36209339",
+      "comment": "",
+      "command": "click",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "587fae43-7928-4885-81c9-5a3338cf9ffc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01e65157-0da7-496a-a60f-06a5b12b3263",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-save-as .btn-close",
+      "targets": [
+        ["css=#dialog-save-as .btn-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-save-as']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "841ca74d-f10e-40e0-bb92-15feefca80a8",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "570bc776-408f-4c53-a23a-f4d1494fcc71",
+      "comment": "",
+      "command": "click",
+      "target": "id=delete_button",
+      "targets": [
+        ["id=delete_button", "id"],
+        ["css=#delete_button", "css:finder"],
+        ["xpath=//button[@id='delete_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5ac871e-35e1-485b-a474-71ae583a0477",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure want to delete aw?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13719a3-fa35-4743-9734-272fd5b85682",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d82855f5-73b5-43f6-a91b-be0b4ece932d",
+      "comment": "",
+      "command": "removeSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=Abc"
+    }, {
+      "id": "ebf51f1c-665f-4dd0-9f81-dcdc7d10cdd9",
+      "comment": "",
+      "command": "addSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=RegEx"
+    }, {
+      "id": "2c907863-d34b-4609-b650-db0ba356a2fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe196976-07da-4441-a163-1fe6a124bb52",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6003f93c-5f6c-4b35-84f3-fa7d8cc12ade",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "zs"
+    }, {
+      "id": "64d8e9ed-aa6b-43c6-9828-62eecd6bf18d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create .btn-primary",
+      "targets": [
+        ["css=#dialog-create .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09db8269-7e9a-4bb1-a764-1bbe9066d8e2",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-regex-input",
+      "targets": [
+        ["id=create-regex-input", "id"],
+        ["css=#create-regex-input", "css:finder"],
+        ["xpath=//input[@id='create-regex-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-regex']/div/div/form/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "a*s*"
+    }, {
+      "id": "edf9acd2-10eb-4097-9a2e-720bee16c196",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create-regex .btn-primary",
+      "targets": [
+        ["css=#dialog-create-regex .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-regex']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/form/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d9b470f-d536-44a1-8255-1f1a01fb2f4f",
+      "comment": "",
+      "command": "click",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6a7b44d-4d8c-40f4-86af-e68016b8d724",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "650d23e8-60a3-4196-a741-cdf4f2626cd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-save-as .btn-close",
+      "targets": [
+        ["css=#dialog-save-as .btn-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-save-as']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bbd0e40-8503-4031-8bbb-d7d50fb76f3e",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4876ec03-f157-43b5-b7bc-87e371976c3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=delete_button",
+      "targets": [
+        ["id=delete_button", "id"],
+        ["css=#delete_button", "css:finder"],
+        ["xpath=//button[@id='delete_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba307c1b-2dfe-4da3-b584-37a92c29377e",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure want to delete zs?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa600626-6faa-4c4b-8899-98523423a022",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4aabc474-1c03-4333-9984-9663da0aa572",
+      "comment": "",
+      "command": "removeSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=RegEx"
+    }, {
+      "id": "1d4f66f1-06fb-4f3d-bbbe-9b405fead22a",
+      "comment": "",
+      "command": "addSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=DFA"
+    }, {
+      "id": "02b5a790-d970-4747-ba6f-79568fa2e598",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03e76d5a-5c1e-4e4a-b9a2-2a2f983f17db",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e48cca12-2f34-47b5-83ab-7dca25b6e63d",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "qw"
+    }, {
+      "id": "6e1afabf-42cd-4ba8-8dfc-3ba9bfe9ed9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create .btn-primary",
+      "targets": [
+        ["css=#dialog-create .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1c82633-88b5-42d8-a380-395095b5455f",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-dfa-input",
+      "targets": [
+        ["id=create-dfa-input", "id"],
+        ["css=#create-dfa-input", "css:finder"],
+        ["xpath=//textarea[@id='create-dfa-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-dfa']/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "[0]\\n[1]\\n[2]"
+    }, {
+      "id": "9efa6ac0-1512-47f9-834f-4af3851169d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-dfa-abc-input",
+      "targets": [
+        ["id=create-dfa-abc-input", "id"],
+        ["css=#create-dfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-dfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-dfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba48cd65-3080-43bf-9519-c4ba54edd903",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-dfa-abc-input",
+      "targets": [
+        ["id=create-dfa-abc-input", "id"],
+        ["css=#create-dfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-dfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-dfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "as"
+    }, {
+      "id": "22e200fb-a66b-4188-86c2-57039be1a59d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create-dfa .btn-primary",
+      "targets": [
+        ["css=#dialog-create-dfa .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-dfa']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/form/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2310e3b1-0fcb-47c8-90b0-45a51b7b3e4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd3d51c9-5430-445d-89fb-1103984a94a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-save-as .btn-close",
+      "targets": [
+        ["css=#dialog-save-as .btn-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-save-as']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa39a417-1971-4e33-b4f9-022c494a1b99",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5f76845-9d43-4462-af20-ea6be34bf560",
+      "comment": "",
+      "command": "click",
+      "target": "id=delete_button",
+      "targets": [
+        ["id=delete_button", "id"],
+        ["css=#delete_button", "css:finder"],
+        ["xpath=//button[@id='delete_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c374d91-6706-4086-bd4e-ce3b9fdc1114",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure want to delete qw?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e20ec014-8998-4298-a51f-d60d3832e938",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59d767c7-f205-4d3a-9c96-7d0417ffa837",
+      "comment": "",
+      "command": "removeSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=DFA"
+    }, {
+      "id": "da18a9da-4b03-4f50-926c-e8768795f217",
+      "comment": "",
+      "command": "addSelection",
+      "target": "css=.multiselect-type",
+      "targets": [
+        ["css=.multiselect-type", "css:finder"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=NFA"
+    }, {
+      "id": "233b0b2d-a8c2-4fba-81e8-ec71aa8647a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ebadd4a-0d08-492f-83fb-e52d9e54d336",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hstack > .btn-primary",
+      "targets": [
+        ["css=.hstack > .btn-primary", "css:finder"],
+        ["xpath=//button[@onclick='openDialog(dialogs.create);']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "012411b2-9874-4fd3-a73b-c94ba131a6fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=nameInput",
+      "targets": [
+        ["id=nameInput", "id"],
+        ["css=#nameInput", "css:finder"],
+        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "zx"
+    }, {
+      "id": "3590483f-0a21-4da6-ac5c-c2ff2b0d1c51",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create .btn-primary",
+      "targets": [
+        ["css=#dialog-create .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99842f13-9a44-4d7d-aa1c-79ad81b47474",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-nfa-input",
+      "targets": [
+        ["id=create-nfa-input", "id"],
+        ["css=#create-nfa-input", "css:finder"],
+        ["xpath=//textarea[@id='create-nfa-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "[0]\\n[1]\\n[2]"
+    }, {
+      "id": "dbeabaa3-1426-4849-a5e9-7426daa488bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-nfa-abc-input",
+      "targets": [
+        ["id=create-nfa-abc-input", "id"],
+        ["css=#create-nfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-nfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18faea93-7a72-4f72-8321-cc3125d82506",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-nfa-abc-input",
+      "targets": [
+        ["id=create-nfa-abc-input", "id"],
+        ["css=#create-nfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-nfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "df"
+    }, {
+      "id": "a270141e-7471-4a04-abb1-4d1556ad5316",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-create-nfa .btn-primary",
+      "targets": [
+        ["css=#dialog-create-nfa .btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07a82d17-da43-4098-98de-17d2a95d8f07",
+      "comment": "",
+      "command": "click",
+      "target": "id=saveas_button",
+      "targets": [
+        ["id=saveas_button", "id"],
+        ["css=#saveas_button", "css:finder"],
+        ["xpath=//button[@id='saveas_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Save as')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "685218a9-bee7-4352-845b-2a6ac6ea84f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dialog-save-as .btn-close",
+      "targets": [
+        ["css=#dialog-save-as .btn-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-save-as']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b01ae991-15b4-4bc1-9a18-0c16842b4894",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9241657-0c3b-4efa-9c11-92a1e104c56f",
+      "comment": "",
+      "command": "click",
+      "target": "id=delete_button",
+      "targets": [
+        ["id=delete_button", "id"],
+        ["css=#delete_button", "css:finder"],
+        ["xpath=//button[@id='delete_button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03877caf-82c4-4e07-a605-fd80a19a4b1a",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure want to delete zx?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e067d5f-c6b6-4202-8841-78b1f3ee72b5",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "700027f8-6a53-45df-97b7-13becaf572db",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["faac2975-fc5c-4371-b4d2-3863f690ad30"]
+  }],
+  "urls": ["https://v1470335.hosted-by-vdsina.ru/regex/"],
+  "plugins": []
+}
