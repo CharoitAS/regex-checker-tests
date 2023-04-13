@@ -1,0 +1,213 @@
+{
+  "id": "f146d60c-03f2-4c3b-ad7f-86fa551ce748",
+  "version": "2.0",
+  "name": "BUG#22 empty lines in NFA",
+  "url": "https://v1470335.hosted-by-vdsina.ru/regex/",
+  "tests": [{
+    "id": "85ab43ae-b7a3-44a1-9e8b-8b0f4abc4850",
+    "name": "NFA",
+    "commands": [{
+      "id": "7e0dfbaf-c9f8-409d-8f2b-50445e0e587a",
+      "comment": "",
+      "command": "open",
+      "target": "https://v1470335.hosted-by-vdsina.ru/regex/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74281575-36c9-4f4b-870b-f43394e66d8c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1050",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "599b4f10-c429-4464-ad5f-9c5f3e3b9d96",
+      "comment": "",
+      "command": "addSelection",
+      "target": "id=sidebar-types",
+      "targets": [
+        ["id=sidebar-types", "id"],
+        ["css=#sidebar-types", "css:finder"],
+        ["xpath=//select[@id='sidebar-types']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "label=NFA"
+    }, {
+      "id": "235652f2-09e1-48c4-bd88-e9c300194af2",
+      "comment": "",
+      "command": "click",
+      "target": "id=sidebar-create-btn",
+      "targets": [
+        ["id=sidebar-create-btn", "id"],
+        ["css=#sidebar-create-btn", "css:finder"],
+        ["xpath=//button[@id='sidebar-create-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='selector-main']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d139e032-f370-4275-b95b-0a992c1e1581",
+      "comment": "",
+      "command": "click",
+      "target": "id=dialog-create-name",
+      "targets": [
+        ["id=dialog-create-name", "id"],
+        ["css=#dialog-create-name", "css:finder"],
+        ["xpath=//input[@id='dialog-create-name']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa9cfb28-7447-4b2e-a4ee-466571834930",
+      "comment": "",
+      "command": "type",
+      "target": "id=dialog-create-name",
+      "targets": [
+        ["id=dialog-create-name", "id"],
+        ["css=#dialog-create-name", "css:finder"],
+        ["xpath=//input[@id='dialog-create-name']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "as"
+    }, {
+      "id": "395bf146-1de0-40c9-92f7-19b8852cae07",
+      "comment": "",
+      "command": "click",
+      "target": "id=dialog-create-confirm-btn",
+      "targets": [
+        ["id=dialog-create-confirm-btn", "id"],
+        ["css=#dialog-create-confirm-btn", "css:finder"],
+        ["xpath=//button[@id='dialog-create-confirm-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d17ecc8-3780-470b-98a5-480bbdac9c2b",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-nfa-abc-input",
+      "targets": [
+        ["id=create-nfa-abc-input", "id"],
+        ["css=#create-nfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-nfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3af1c553-96e8-49c1-bbe2-ed3e5005feab",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-nfa-abc-input",
+      "targets": [
+        ["id=create-nfa-abc-input", "id"],
+        ["css=#create-nfa-abc-input", "css:finder"],
+        ["xpath=//input[@id='create-nfa-abc-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "as"
+    }, {
+      "id": "a507a9ce-db52-4690-b893-ed086506b625",
+      "comment": "",
+      "command": "click",
+      "target": "id=create-nfa-input",
+      "targets": [
+        ["id=create-nfa-input", "id"],
+        ["css=#create-nfa-input", "css:finder"],
+        ["xpath=//textarea[@id='create-nfa-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d882b36-0708-4d98-9b74-f9604d9873ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=create-nfa-input",
+      "targets": [
+        ["id=create-nfa-input", "id"],
+        ["css=#create-nfa-input", "css:finder"],
+        ["xpath=//textarea[@id='create-nfa-input']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div/table/tbody/tr/td/div[3]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "[q0]\\n\\n[q1]\\n\\n\\n\\n[q2]\\n[[q3]]"
+    }, {
+      "id": "7795c33c-e886-4b0c-8eac-3949fcd7aea2",
+      "comment": "",
+      "command": "click",
+      "target": "id=dialog-create-nfa-confirm-btn",
+      "targets": [
+        ["id=dialog-create-nfa-confirm-btn", "id"],
+        ["css=#dialog-create-nfa-confirm-btn", "css:finder"],
+        ["xpath=//button[@id='dialog-create-nfa-confirm-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='dialog-create-nfa']/div/div/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/form/div[2]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "656652b7-d8fd-40ae-9304-7df89ce64a5a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.code-block:nth-child(6)",
+      "targets": [
+        ["css=.code-block:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='viewer-content']/pre", "xpath:idRelative"],
+        ["xpath=//div/pre", "xpath:position"],
+        ["xpath=//pre[contains(.,'as\n[q0]\n[q1]\n[q2]\n[[q3]]\n')]", "xpath:innerText"]
+      ],
+      "value": "as\\n[q0]\\n[q1]\\n[q2]\\n[[q3]]"
+    }, {
+      "id": "b2491320-0653-4808-a33f-0909c65e2ff3",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56f3d148-1ccf-4140-8961-197f480d8722",
+      "comment": "",
+      "command": "click",
+      "target": "id=delete-button",
+      "targets": [
+        ["id=delete-button", "id"],
+        ["css=#delete-button", "css:finder"],
+        ["xpath=//button[@id='delete-button']", "xpath:attributes"],
+        ["xpath=//center[@id='viewer-header']/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be91ae52-6125-4340-b1c8-011a553dbd29",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure want to delete as?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e40a0c90-016d-40d4-97f3-11fd14c1677a",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "73a73074-c17c-469b-b9ca-583f7b6bcf4d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85ab43ae-b7a3-44a1-9e8b-8b0f4abc4850"]
+  }],
+  "urls": ["https://v1470335.hosted-by-vdsina.ru/regex/"],
+  "plugins": []
+}
