@@ -21,20 +21,26 @@ def run_cli_implementation(cli_path, test, options=[], fail_allowed=False):
 
   if isinstance(test, list):
     test = "\n".join(test)
-  test = test.strip() + "\n"
+  test += "\n"
 
   run_results = subprocess.run(command, input=test.encode(), capture_output = True, timeout = 20)
 
   result = Result()
   result.retcode = run_results.returncode 
-  result.output = run_results.stdout.decode().strip()
-  result.errors = run_results.stderr.decode().strip()
+  result.output = run_results.stdout.decode()
+  result.errors = run_results.stderr.decode()
 
   if result.errors != "":
     print(result.errors, file=sys.stderr)
 
   if result.output != "":
     print(result.output, file=sys.stdout)
+  
+  if result.errors.endswith("\n"):
+    result.errors = result.errors[:-1].rstrip("\r")
+  
+  if result.output.endswith("\n"):
+    result.output = result.output[:-1].rstrip("\r")
   
   if not fail_allowed:
     assert result.retcode == 0, "Return code of the program is not 0"
