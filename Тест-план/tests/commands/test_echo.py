@@ -32,4 +32,4 @@ def test_5(run_cli):
 def test_6(run_cli):
   result = run_cli("echo vip   vip   ")  
   assert result.errors == ""
-  assert result.output == "vip   vip   "
+  assert result.output == "vip   vip"
