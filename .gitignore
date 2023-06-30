@@ -1,3 +1,5 @@
 cli.exe
 __pycache__
 .pytest_cache
+*.class
+.vscode
