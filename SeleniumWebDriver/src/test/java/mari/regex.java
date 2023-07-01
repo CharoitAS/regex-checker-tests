@@ -32,16 +32,20 @@ public class regex {
         driver.quit();
     }
 
+    private By sidebarCreateButtonLocator = By.id("sidebar-create-btn");
+    private By sidebarRefreshButtonLocator = By.id("sidebar-refresh-btn");
+    private By dialogCreateNameLocator = By.id("dialog-create-name");
+    private By dialogCreateConfirmButtonLocator = By.id("dialog-create-confirm-btn");
     @Test
     public void regexGo()
     {
         driver.navigate().to("https://v1470335.hosted-by-vdsina.ru/regex/");
-        WebElement createButton = driver.findElement(By.id("sidebar-create-btn"));
-        WebElement refreshButton = driver.findElement(By.id("sidebar-refresh-btn"));
-        createButton.click();
-        //refreshButton.click();
-        driver.findElement(By.id("dialog-create-name")).sendKeys("My Regex");
-        driver.findElement(By.id("dialog-create-confirm-btn")).click();
+        //WebElement createButton = driver.findElement(By.id("sidebar-create-btn"));
+        //WebElement refreshButton = driver.findElement(By.id("sidebar-refresh-btn"));
+        driver.findElement(sidebarRefreshButtonLocator);
+        driver.findElement(sidebarCreateButtonLocator).click();
+        driver.findElement(dialogCreateNameLocator).sendKeys("My Regex");
+        driver.findElement(dialogCreateConfirmButtonLocator).click();
     }
     
 }
