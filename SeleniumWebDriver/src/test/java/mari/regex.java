@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.lang.Thread;
 
 public class regex {
 
@@ -36,6 +37,12 @@ public class regex {
     private By sidebarRefreshButtonLocator = By.id("sidebar-refresh-btn");
     private By dialogCreateNameLocator = By.id("dialog-create-name");
     private By dialogCreateConfirmButtonLocator = By.id("dialog-create-confirm-btn");
+    private By regexLocator = By.id("sidebar-types");
+    private By createRegexInputLocator = By.id("create-regex-input");
+    private By dialogCreateRegexConfirmButtonLocator = By.id("dialog-create-regex-confirm-btn");
+    private By deleteButtonLocator = By.id("delete-button");
+    
+
     @Test
     public void regexGo()
     {
@@ -43,9 +50,15 @@ public class regex {
         //WebElement createButton = driver.findElement(By.id("sidebar-create-btn"));
         //WebElement refreshButton = driver.findElement(By.id("sidebar-refresh-btn"));
         driver.findElement(sidebarRefreshButtonLocator);
+        driver.findElement(regexLocator);
         driver.findElement(sidebarCreateButtonLocator).click();
         driver.findElement(dialogCreateNameLocator).sendKeys("My Regex");
         driver.findElement(dialogCreateConfirmButtonLocator).click();
+        driver.findElement(createRegexInputLocator).sendKeys("a(a|b)*");
+        driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
+        driver.findElement(deleteButtonLocator).click();
+        driver.switchTo().alert().accept(); //нажать "ок" во всплывающем окне
+
     }
     
 }
