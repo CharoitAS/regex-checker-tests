@@ -37,25 +37,29 @@ public class regex {
     private By sidebarRefreshButtonLocator = By.id("sidebar-refresh-btn");
     private By dialogCreateNameLocator = By.id("dialog-create-name");
     private By dialogCreateConfirmButtonLocator = By.id("dialog-create-confirm-btn");
-    private By regexLocator = By.id("sidebar-types");
+    private By regexLocator = By.cssSelector("#sidebar-types option[value=\"regex\"]");
     private By createRegexInputLocator = By.id("create-regex-input");
     private By dialogCreateRegexConfirmButtonLocator = By.id("dialog-create-regex-confirm-btn");
     private By deleteButtonLocator = By.id("delete-button");
+    private By viewerObjNameLocatir = By.id("viewer_obj_name");
     
 
     @Test
-    public void regexGo()
+    public void regexGo() throws InterruptedException
     {
         driver.navigate().to("https://v1470335.hosted-by-vdsina.ru/regex/");
         //WebElement createButton = driver.findElement(By.id("sidebar-create-btn"));
         //WebElement refreshButton = driver.findElement(By.id("sidebar-refresh-btn"));
         driver.findElement(sidebarRefreshButtonLocator);
-        driver.findElement(regexLocator);
+        driver.findElement(regexLocator).click();
         driver.findElement(sidebarCreateButtonLocator).click();
         driver.findElement(dialogCreateNameLocator).sendKeys("My Regex");
         driver.findElement(dialogCreateConfirmButtonLocator).click();
         driver.findElement(createRegexInputLocator).sendKeys("a(a|b)*");
         driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
+        Thread.sleep(1000);
+        String text = driver.findElement(viewerObjNameLocatir).getText();
+        Assertions.assertEquals("My Regex", text);
         driver.findElement(deleteButtonLocator).click();
         driver.switchTo().alert().accept(); //нажать "ок" во всплывающем окне
 
