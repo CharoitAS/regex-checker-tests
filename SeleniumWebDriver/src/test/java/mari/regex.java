@@ -33,6 +33,7 @@ public class regex {
         driver.quit();
     }
 
+    private String url = "https://v1470335.hosted-by-vdsina.ru/regex/";
     private By sidebarCreateButtonLocator = By.id("sidebar-create-btn");
     private By sidebarRefreshButtonLocator = By.id("sidebar-refresh-btn");
     private By dialogCreateNameLocator = By.id("dialog-create-name");
@@ -43,26 +44,46 @@ public class regex {
     private By deleteButtonLocator = By.id("delete-button");
     private By viewerObjNameLocatir = By.id("viewer_obj_name");
     
+    
 
     @Test
-    public void regexGo() throws InterruptedException
+    public void regex1() throws InterruptedException
     {
-        driver.navigate().to("https://v1470335.hosted-by-vdsina.ru/regex/");
-        //WebElement createButton = driver.findElement(By.id("sidebar-create-btn"));
-        //WebElement refreshButton = driver.findElement(By.id("sidebar-refresh-btn"));
-        driver.findElement(sidebarRefreshButtonLocator);
-        driver.findElement(regexLocator).click();
-        driver.findElement(sidebarCreateButtonLocator).click();
-        driver.findElement(dialogCreateNameLocator).sendKeys("My Regex");
-        driver.findElement(dialogCreateConfirmButtonLocator).click();
-        driver.findElement(createRegexInputLocator).sendKeys("a(a|b)*");
-        driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
+        String name = "My Regex";
+        driver.navigate().to(url);
+        createRegex(name, "a(a|b)*" );
         Thread.sleep(1000);
         String text = driver.findElement(viewerObjNameLocatir).getText();
-        Assertions.assertEquals("My Regex", text);
+        Assertions.assertEquals(name, text);
+        deleteCurrentObject();
+    }
+
+    @Test
+    public void regex2() throws InterruptedException
+    {
+        String name = "Long";
+        driver.navigate().to(url);
+        createRegex(name, "a|b(c|d)*z|x*v*r(samsa|f|g)" );
+        Thread.sleep(1000);
+        String text = driver.findElement(viewerObjNameLocatir).getText();
+        Assertions.assertEquals(name, text);
+        deleteCurrentObject();
+    }
+
+    public void createRegex(String name, String value)
+    {
+        driver.findElement(regexLocator).click();
+        driver.findElement(sidebarCreateButtonLocator).click();
+        driver.findElement(dialogCreateNameLocator).sendKeys(name);
+        driver.findElement(dialogCreateConfirmButtonLocator).click();
+        driver.findElement(createRegexInputLocator).sendKeys(value);
+        driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
+    }
+
+    public void deleteCurrentObject()
+    {
         driver.findElement(deleteButtonLocator).click();
         driver.switchTo().alert().accept(); //нажать "ок" во всплывающем окне
-
     }
     
 }
