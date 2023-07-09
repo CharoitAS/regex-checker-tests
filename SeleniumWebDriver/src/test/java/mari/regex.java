@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.lang.Thread;
+import java.util.*;
 
 public class regex {
 
@@ -23,9 +24,10 @@ public class regex {
     }
 
     @BeforeEach
-    void setup() {
+    void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        deleteAllObjects();
     }
 
     @AfterEach
@@ -42,7 +44,8 @@ public class regex {
     private By createRegexInputLocator = By.id("create-regex-input");
     private By dialogCreateRegexConfirmButtonLocator = By.id("dialog-create-regex-confirm-btn");
     private By deleteButtonLocator = By.id("delete-button");
-    private By viewerObjNameLocatir = By.id("viewer_obj_name");
+    private By viewerObjNameLocator = By.id("viewer_obj_name");
+    private By sidebarObjectsLocator = By.cssSelector("#sidebar-objects option");
     
     
 
@@ -53,7 +56,7 @@ public class regex {
         driver.navigate().to(url);
         createRegex(name, "a(a|b)*" );
         Thread.sleep(1000);
-        String text = driver.findElement(viewerObjNameLocatir).getText();
+        String text = driver.findElement(viewerObjNameLocator).getText();
         Assertions.assertEquals(name, text);
         deleteCurrentObject();
     }
@@ -65,7 +68,7 @@ public class regex {
         driver.navigate().to(url);
         createRegex(name, "a|b(c|d)*z|x*v*r(samsa|f|g)" );
         Thread.sleep(1000);
-        String text = driver.findElement(viewerObjNameLocatir).getText();
+        String text = driver.findElement(viewerObjNameLocator).getText();
         Assertions.assertEquals(name, text);
         deleteCurrentObject();
     }
@@ -85,5 +88,21 @@ public class regex {
         driver.findElement(deleteButtonLocator).click();
         driver.switchTo().alert().accept(); //нажать "ок" во всплывающем окне
     }
-    
+
+    public void deleteAllObjects() throws InterruptedException
+    {
+        driver.navigate().to(url);
+        
+        while (true){
+            List<WebElement> objects = driver.findElements(sidebarObjectsLocator);
+            if (objects.isEmpty()) {
+                break;
+            } 
+            objects.get(0).click();
+            Thread.sleep(500);
+            deleteCurrentObject();
+            Thread.sleep(500);
+        }
+        
+    }
 }
