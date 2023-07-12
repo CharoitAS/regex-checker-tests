@@ -64,15 +64,25 @@ public class regex {
     @Test
     public void regex2() throws InterruptedException
     {
-        String name = "Long";
+        String name = "<script>alert('XSS')</script>";
         driver.navigate().to(url);
         createRegex(name, "a|b(c|d)*z|x*v*r(samsa|f|g)" );
         Thread.sleep(1000);
         String text = driver.findElement(viewerObjNameLocator).getText();
-        Assertions.assertEquals(name, text);
+        Assertions.assertEquals("scriptalert(XSS)/script", text);
         deleteCurrentObject();
     }
 
+     @Test
+    public void regex3() throws InterruptedException
+    {
+        String name = "My Regex";
+        driver.navigate().to(url);
+        createRegex(name, "*a" );
+        Thread.sleep(1000);
+        driver.switchTo().alert().accept();
+    }
+    
     public void createRegex(String name, String value)
     {
         driver.findElement(regexLocator).click();
