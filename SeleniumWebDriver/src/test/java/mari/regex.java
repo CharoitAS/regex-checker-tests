@@ -46,11 +46,12 @@ public class regex {
     private By deleteButtonLocator = By.id("delete-button");
     private By viewerObjNameLocator = By.id("viewer_obj_name");
     private By sidebarObjectsLocator = By.cssSelector("#sidebar-objects option");
+    private By createRegexAbcInputLocator = By.id("create-regex-abc-input");
     
     
-
+    //создание РВ
     @Test
-    public void regex1() throws InterruptedException
+    public void regex1() throws InterruptedException 
     {
         String name = "My Regex";
         driver.navigate().to(url);
@@ -61,6 +62,7 @@ public class regex {
         deleteCurrentObject();
     }
 
+    //создание имени со спецсимволами
     @Test
     public void regex2() throws InterruptedException
     {
@@ -73,7 +75,8 @@ public class regex {
         deleteCurrentObject();
     }
 
-     @Test
+    //создание РВ с некорректным значением
+    @Test
     public void regex3() throws InterruptedException
     {
         String name = "My Regex";
@@ -81,6 +84,32 @@ public class regex {
         createRegex(name, "*a" );
         Thread.sleep(1000);
         driver.switchTo().alert().accept();
+    }
+
+    //создание РВ с пустым значением
+    @Test
+    public void regex4() throws InterruptedException 
+    {
+        String name = "My Alphabet";
+        driver.navigate().to(url);
+        createRegexWithAlphabet(name, "", "dfg" );
+        Thread.sleep(1000);
+        String text = driver.findElement(viewerObjNameLocator).getText();
+        Assertions.assertEquals(name, text);
+        deleteCurrentObject();
+    }
+
+    //создание со значением )EMPTY(
+    @Test
+    public void regex5() throws InterruptedException 
+    {
+        String name = "My Empty";
+        driver.navigate().to(url);
+        createRegexWithAlphabet(name, ")EMPTY(", "abc" );
+        Thread.sleep(1000);
+        String text = driver.findElement(viewerObjNameLocator).getText();
+        Assertions.assertEquals(name, text);
+        deleteCurrentObject();
     }
     
     public void createRegex(String name, String value)
@@ -90,6 +119,18 @@ public class regex {
         driver.findElement(dialogCreateNameLocator).sendKeys(name);
         driver.findElement(dialogCreateConfirmButtonLocator).click();
         driver.findElement(createRegexInputLocator).sendKeys(value);
+        driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
+        
+    }
+
+    public void createRegexWithAlphabet(String name,String value, String abc)
+    {
+        driver.findElement(regexLocator).click();
+        driver.findElement(sidebarCreateButtonLocator).click();
+        driver.findElement(dialogCreateNameLocator).sendKeys(name);
+        driver.findElement(dialogCreateConfirmButtonLocator).click();
+        driver.findElement(createRegexInputLocator).sendKeys(value);
+        driver.findElement(createRegexAbcInputLocator).sendKeys(abc);
         driver.findElement(dialogCreateRegexConfirmButtonLocator).click();
     }
 
